@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: raw_data_circle
+    tables:
+      - name: funnel
+        identifier: raw_cc_funnel
+      - name: priority
+        identifier: raw_cc_funnel_priority
