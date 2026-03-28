@@ -8,3 +8,19 @@ sources:
         identifier: raw_cc_funnel
       - name: priority
         identifier: raw_cc_funnel_priority
+
+models:
+  - name: stg_raw__funnel
+    columns:
+      - name: company
+        tests:
+          - unique
+          - not_null
+  - name: stg_raw__priority
+    columns:
+      - name: company
+        tests:
+          - unique
+          - not_null
+          
+          
