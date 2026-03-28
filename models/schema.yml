@@ -2,27 +2,35 @@ version: 2
 
 sources:
   - name: raw
+    description: Raw data for Circle (eco-responsible sportswear)
     schema: raw_data_circle
     tables:
       - name: funnel
         identifier: raw_cc_funnel
+        description: raw data for Circle Funnel
       - name: priority
         identifier: raw_cc_funnel_priority
+        description: raw data for Circle Funnel Priority
 
 models:
   - name: stg_raw__funnel
+    description: Clean funnel Circle data
     columns:
       - name: company
+        description: Primary Key
         tests:
           - unique
           - not_null
   - name: stg_raw__priority
+    description: Clean funnel priority Circle data
     columns:
       - name: company
+        description: Primary Key
         tests:
           - unique
           - not_null
       - name: priority
+        description: Lead priority
         tests:
           - accepted_values:
               values: ['Low', 'Medium', 'High']
