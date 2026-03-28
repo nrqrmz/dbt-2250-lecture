@@ -22,5 +22,9 @@ models:
         tests:
           - unique
           - not_null
+      - name: priority
+        tests:
+          - accepted_values:
+              values: ['Low', 'Medium', 'High']
           
           
